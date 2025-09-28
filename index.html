@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-brand">CityHub</div>
+        <nav class="main-nav">
+            <input type="text" class="search-bar" placeholder="Search events...">
+            <div class="dropdown">
+                <button class="dropbtn">Select City</button>
+                <div class="dropdown-content">
+                    <a href="#">Amravati</a>
+                    <a href="#">Nagpur (Coming Soon🔜)</a>
+                </div>
+            </div>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Amravati, Maharashtra</h1>
+            <h2>Discover Amravati</h2>
+            <p>Your complete guide to events, businesses, and cultural heritage</p>
+            <div class="cta-group">
+                <a href="#events" class="cta-btn">Explore Events</a>
+                <p>Check out upcoming events like festivals and workshops!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <p>Don't miss out on exciting events in your city</p>
+        <div id="upcoming-events-container" class="events-container"></div>
+    </section>
+
+    <section class="events-section">
+        <h2>Completed Events</h2>
+        <p>Explore past events and their highlights</p>
+        <div id="completed-events-container" class="events-container"></div>
+    </section>
+
+    <section class="news-section">
+        <h2>City News & Updates</h2>
+        <p>Stay informed about what's happening</p>
+        <div id="news-container" class="news-container"></div>
+    </section>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-event-name"></h2>
+            <img id="modal-event-image" style="display: none; max-width: 100%; height: auto;">
+            <p id="modal-event-desc"></p>
+            <p><strong>Date:</strong> <span id="modal-event-date"></span></p>
+            <p><strong>Time:</strong> <span id="modal-event-time"></span></p>
+            <p><strong>Venue:</strong> <span id="modal-event-venue"></span></p>
+            <p><strong>Duration:</strong> <span id="modal-event-duration"></span> hours</p>
+            <p><strong>Contact:</strong> <span id="modal-event-contact"></span></p>
+            <p><strong>Cost:</strong> <span id="modal-event-cost"></span></p>
+            <p><strong>Seats:</strong> <span id="modal-event-seats"></span></p>
+            <p><strong>Owner:</strong> <span id="modal-event-owner"></span></p>
+            <button id="modal-book-btn" style="display: none;">Book Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CityHub Amravati. All rights reserved.</p>
+            <p>Email: <a href="mailto:info@cityhubamravati.com">info@cityhubamravati.com</a></p>
+            <p>Helpline: <a href="tel:+911234567890">+91-123-456-7890</a></p>
+            <p>About: CityHub is your ultimate guide to exploring events, businesses, and cultural heritage.</p>
+            <div class="footer-social">
+                <p>Follow us:</p>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
