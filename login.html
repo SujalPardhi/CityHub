@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+    <header>
+        <div class="nav-brand">CityHub</div>
+        <a href="index.html" class="btn-home">Home</a>
+    </header>
+
+    <section class="login-section fade-in">
+        <h2>Login to CityHub</h2>
+        <div class="login-tabs">
+            <button class="tab-btn" onclick="openTab('user-login')">User Login</button>
+            <button class="tab-btn" onclick="openTab('owner-login')">Owner/Admin Login</button>
+        </div>
+
+        <div id="user-login" class="tab-content">
+            <form id="user-login-form">
+                <label for="user-username">Username:</label>
+                <input id="user-username" type="text" required>
+                <label for="user-password">Password:</label>
+                <input id="user-password" type="password" required>
+                <button type="submit">Login as User</button>
+            </form>
+            <p>Not registered? <a href="register-user.html">Register as User</a></p>
+        </div>
+
+        <div id="owner-login" class="tab-content">
+            <form id="owner-login-form">
+                <label for="owner-username">Username:</label>
+                <input id="owner-username" type="text" required>
+                <label for="owner-password">Password:</label>
+                <input id="owner-password" type="password" required>
+                <button type="submit">Login as Owner/Admin</button>
+            </form>
+            <p>Not registered? <a href="register-owner.html">Register as Owner</a> | <a href="register-admin.html">Register as Admin</a></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

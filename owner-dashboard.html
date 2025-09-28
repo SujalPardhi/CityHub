@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub Owner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-brand">CityHub</div>
+        <a href="javascript:logout()" class="btn-login">Logout</a>
+    </header>
+
+    <section class="dashboard-section fade-in">
+        <h2>Add New Event</h2>
+        <form id="add-event-form">
+            <label for="event-name">Event Name:</label>
+            <input id="event-name" type="text" required>
+            <label for="desc">Description:</label>
+            <textarea id="desc" required></textarea>
+            <label for="image">Image:</label>
+            <input id="image" type="file" accept="image/*">
+            <label for="date">Date:</label>
+            <input id="date" type="date" required>
+            <label for="venue">Venue:</label>
+            <input id="venue" type="text" required>
+            <label for="time">Time:</label>
+            <input id="time" type="time" required>
+            <label for="duration">Duration (hours):</label>
+            <input id="duration" type="number" required>
+            <label for="contact">Contact:</label>
+            <input id="contact" type="text" required>
+            <label>Paid or Free:</label>
+            <input type="radio" name="paid" value="free" checked> Free
+            <input type="radio" name="paid" value="paid"> Paid
+            <div id="amount-div" style="display: none;">
+                <label for="amount">Amount:</label>
+                <input id="amount" type="number">
+            </div>
+            <label>Seats:</label>
+            <input type="radio" name="seats" value="unlimited" checked> Unlimited
+            <input type="radio" name="seats" value="limited"> Limited
+            <div id="seats-div" style="display: none;">
+                <label for="num-seats">Number of Seats:</label>
+                <input id="num-seats" type="number">
+            </div>
+            <button type="submit">Add Event</button>
+        </form>
+    </section>
+
+    <section class="my-events fade-in">
+        <h2>My Upcoming Events</h2>
+        <div id="my-upcoming-container" class="events-container"></div>
+    </section>
+
+    <section class="my-events fade-in">
+        <h2>My Completed Events</h2>
+        <div id="my-completed-container" class="events-container"></div>
+    </section>
+
+    <section class="dashboard-section" id="edit-section" style="display: none;">
+        <h2>Edit Event</h2>
+        <form id="edit-event-form">
+            <label for="edit-event-name">Event Name:</label>
+            <input id="edit-event-name" type="text" required>
+            <label for="edit-desc">Description:</label>
+            <textarea id="edit-desc" required></textarea>
+            <label for="edit-image">Image:</label>
+            <input id="edit-image" type="file" accept="image/*">
+            <label for="edit-date">Date:</label>
+            <input id="edit-date" type="date" required>
+            <label for="edit-venue">Venue:</label>
+            <input id="edit-venue" type="text" required>
+            <label for="edit-time">Time:</label>
+            <input id="edit-time" type="time" required>
+            <label for="edit-duration">Duration (hours):</label>
+            <input id="edit-duration" type="number" required>
+            <label for="edit-contact">Contact:</label>
+            <input id="edit-contact" type="text" required>
+            <label>Paid or Free:</label>
+            <input type="radio" name="edit-paid" value="free" checked> Free
+            <input type="radio" name="edit-paid" value="paid"> Paid
+            <div id="edit-amount-div" style="display: none;">
+                <label for="edit-amount">Amount:</label>
+                <input id="edit-amount" type="number">
+            </div>
+            <label>Seats:</label>
+            <input type="radio" name="edit-seats" value="unlimited" checked> Unlimited
+            <input type="radio" name="edit-seats" value="limited"> Limited
+            <div id="edit-seats-div" style="display: none;">
+                <label for="edit-num-seats">Number of Seats:</label>
+                <input id="edit-num-seats" type="number">
+            </div>
+            <button type="submit">Submit Edit</button>
+            <button type="button" onclick="cancelEdit()">Cancel</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

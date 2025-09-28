@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-brand">CityHub</div>
+        <a href="javascript:logout()" class="btn-login">Logout</a>
+    </header>
+
+    <section class="dashboard-section fade-in">
+        <h2>Your Booked Upcoming Events</h2>
+        <div id="booked-upcoming-container" class="events-container"></div>
+    </section>
+
+    <section class="dashboard-section fade-in">
+        <h2>Your Booked Completed Events</h2>
+        <div id="booked-completed-container" class="events-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
